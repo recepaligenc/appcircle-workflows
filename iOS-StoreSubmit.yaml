@@ -14,7 +14,10 @@ steps:
   inputs:
   - Execute: "bash"
   - Script: |
+      echo $IPAFileName 
+      echo $IPAFileUrl
       curl -o ./$IPAFileName -k $IPAFileUrl
+      
       bundle init
       echo "gem \"fastlane\"">>Gemfile
       mkdir fastlane
